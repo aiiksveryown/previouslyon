@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Previouslyon</string>
+    <string name="album">Album</string>
+    <string name="artist">Artysta</string>
+    <string name="total_tracks">Ilość utworów: </string>
+    <string name="movie">Filmy</string>
+    <string name="tv_show">Seriale</string>
+    <string name="search">Szukaj</string>
+    <string name="empty_search_query">Wprowadź co najmniej 1 znak</string>
+    <string name="back">Wróć</string>
+    <string name="top_cast">Obsada</string>
+    <string name="spoken_languages">Obsługiwane języki</string>
+    <string name="cast_is_empty">Obsada jest pusta</string>
+    <string name="languages_empty">Lista języków jest pusta</string>
+    <string name="seasons">Sezony</string>
+    <string name="season">Sezon</string>
+    <string name="episode">Odcinek</string>
+    <string name="added_to_library">Dodano do biblioteki</string>
+    <string name="removed_from_library">Usunięto z biblioteki</string>
+    <string name="episodes">Odcinków</string>
+</resources>

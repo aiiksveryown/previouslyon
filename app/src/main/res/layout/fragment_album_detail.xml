@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="@color/black"
+    tools:context=".feature_album.presentation.DetailAlbumFragment">
+
+        <ProgressBar
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:id="@+id/progressBar"
+            android:indeterminateTint="@color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:overScrollMode="never"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:id="@+id/imgBack"
+                app:tint="@color/white"
+                android:src="@drawable/ic_arrow_back"
+                android:contentDescription="@string/back" />
+
+            <ImageView
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_gravity="center"
+                tools:src="@drawable/album_error"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="5dp"
+                android:id="@+id/imgAlbum"
+                android:contentDescription="@string/album" />
+
+            <LinearLayout
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="Przykładowa nazwa albumu"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/cabin_semibold"
+                    android:textColor="@color/white"
+                    android:id="@+id/txtAlbumName"/>
+
+                <TextView
+                    android:fontFamily="@font/cabin"
+                    android:id="@+id/txtArtist"
+                    android:textColor="@color/text_grey"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    tools:text="Przykładowy artsyta"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_save_outlined"
+                app:tint="@color/white"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="5dp"
+                android:id="@+id/imgSave"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtInfo"
+                    android:layout_marginStart="10dp"
+                    tools:text="Album • 2022 • Total tracks: 15"
+                    android:layout_width="0dp"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/cabin"
+                    android:textColor="@color/text_grey"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/txtAlbumTime"
+                    android:layout_marginEnd="10dp"
+                    tools:text="1h 10min"
+                    android:layout_width="wrap_content"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/cabin"
+                    android:textColor="@color/text_grey"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnArtist"
+                    app:iconTint="@color/white"
+                    android:layout_weight="1"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/cabin_semibold"
+                    app:icon="@drawable/ic_artist"
+                    android:layout_marginEnd="20dp"
+                    android:backgroundTint="@color/album_green"
+                    android:text="@string/artist"/>
+
+                <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                    app:icon="@drawable/ic_album"
+                    app:iconTint="@color/white"
+                    android:layout_weight="1"
+                    android:layout_marginStart="20dp"
+                    android:text="@string/album"
+                    android:fontFamily="@font/cabin_semibold"
+                    android:id="@+id/btnAlbum"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/album_green"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:overScrollMode="never"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                tools:listitem="@layout/layout_album_track_list"
+                android:id="@+id/recyclerViewTracks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

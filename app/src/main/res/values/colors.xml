@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="background">#121212</color>
+    <color name="app_bar_color">#242424</color>
+
+    <color name="search_edit_text_background">#0C0C0C</color>
+    <color name="text_grey">#CCCCCC</color>
+    <color name="search_edit_text_icon">#CCCCCC</color>
+
+    <color name="album_green">#32E875</color>
+    <color name="movie_blue">#357DED</color>
+    <color name="tv_show_red">#F44336</color>
+</resources>

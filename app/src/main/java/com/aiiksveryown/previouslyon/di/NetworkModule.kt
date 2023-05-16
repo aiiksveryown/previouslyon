@@ -1,11 +1,7 @@
 package com.aiiksveryown.previouslyon.di
 
-import com.aiiksveryown.previouslyon.feature_album.data.api.AlbumApi
-import com.aiiksveryown.previouslyon.feature_album.data.api.SpotifyAuthInterceptor
-import com.aiiksveryown.previouslyon.feature_movie.data.api.MovieApi
 import com.aiiksveryown.previouslyon.feature_tv_show.data.api.TvShowApi
-import com.aiiksveryown.previouslyon.feature_movie.data.api.TMDBInterceptor
-import com.aiiksveryown.previouslyon.util.Constants.SPOTIFY_BASE_URL
+import com.aiiksveryown.previouslyon.feature_tv_show.data.api.TMDBInterceptor
 import com.aiiksveryown.previouslyon.util.Constants.TMDB_BASE_URL
 import com.google.gson.GsonBuilder
 import dagger.Module
@@ -21,16 +17,13 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 object NetworkModule {
-
     @Provides
     @Singleton
     fun provideHttpClient(
-        authInterceptor: SpotifyAuthInterceptor,
         httpLoggingInterceptor: HttpLoggingInterceptor,
         TMDBInterceptor: TMDBInterceptor
     ): OkHttpClient {
         return OkHttpClient.Builder()
-            .addInterceptor(authInterceptor)
             .addInterceptor(httpLoggingInterceptor)
             .addInterceptor(TMDBInterceptor)
             .build()
@@ -53,34 +46,6 @@ object NetworkModule {
 
     @Provides
     @Singleton
-    fun provideAlbumInstance(
-        httpClient: OkHttpClient,
-        gsonConverterFactory: GsonConverterFactory
-    ) : AlbumApi {
-        return Retrofit.Builder()
-            .baseUrl(SPOTIFY_BASE_URL)
-            .addConverterFactory(gsonConverterFactory)
-            .client(httpClient)
-            .build()
-            .create(AlbumApi::class.java)
-    }
-
-    @Provides
-    @Singleton
-    fun provideMovieInstance(
-        httpClient: OkHttpClient,
-        gsonConverterFactory: GsonConverterFactory
-    ) : MovieApi {
-        return Retrofit.Builder()
-            .baseUrl(TMDB_BASE_URL)
-            .addConverterFactory(gsonConverterFactory)
-            .client(httpClient)
-            .build()
-            .create(MovieApi::class.java)
-    }
-
-    @Provides
-    @Singleton
     fun provideTvShowInstance(
         httpClient: OkHttpClient,
         gsonConverterFactory: GsonConverterFactory
@@ -98,4 +63,5 @@ object NetworkModule {
     fun provideMovieInterceptor() : TMDBInterceptor {
         return TMDBInterceptor()
     }
+
 }

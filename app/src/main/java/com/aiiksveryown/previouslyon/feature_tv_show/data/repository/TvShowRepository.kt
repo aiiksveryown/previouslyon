@@ -1,7 +1,7 @@
 package com.aiiksveryown.previouslyon.feature_tv_show.data.repository
 
 import androidx.lifecycle.LiveData
-import com.aiiksveryown.previouslyon.feature_movie.data.response.MovieTvShowCreditsResponse
+import com.aiiksveryown.previouslyon.feature_tv_show.data.response.TvShowCreditsResponse
 import com.aiiksveryown.previouslyon.feature_tv_show.data.api.TvShowApi
 import com.aiiksveryown.previouslyon.feature_tv_show.data.api.search.SearchTvShow
 import com.aiiksveryown.previouslyon.feature_tv_show.data.database.dao.TvShowDao
@@ -64,7 +64,7 @@ class TvShowRepository @Inject constructor(
         }
     }
 
-    suspend fun tvShowCredits(tvShowId : Int) : Resource<MovieTvShowCreditsResponse> {
+    suspend fun tvShowCredits(tvShowId : Int) : Resource<TvShowCreditsResponse> {
         return try {
             val response = tvShowApi.tvShowCredits(tvShowId)
             if (response.isSuccessful) {

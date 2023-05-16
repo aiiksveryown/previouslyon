@@ -1,4 +1,4 @@
-package com.aiiksveryown.previouslyon.feature_movie.presentation.adapter
+package com.aiiksveryown.previouslyon.feature_tv_show.presentation.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.aiiksveryown.previouslyon.R
 import com.aiiksveryown.previouslyon.databinding.LayoutCastBinding
-import com.aiiksveryown.previouslyon.feature_movie.data.api.detail.Cast
+import com.aiiksveryown.previouslyon.feature_tv_show.data.api.detail.Cast
 import com.aiiksveryown.previouslyon.util.Constants.TMDB_IMAGE_ORIGINAL
 import com.aiiksveryown.previouslyon.util.utils.DiffUtils
 

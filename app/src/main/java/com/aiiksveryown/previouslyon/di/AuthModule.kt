@@ -2,8 +2,6 @@ package com.aiiksveryown.previouslyon.di
 
 import android.content.Context
 import android.content.SharedPreferences
-import com.aiiksveryown.previouslyon.feature_album.data.api.SpotifyAuthInterceptor
-import com.aiiksveryown.previouslyon.feature_album.data.api.token.AuthApi
 import com.aiiksveryown.previouslyon.util.Constants.SPOTIFY_AUTH_URL
 import dagger.Module
 import dagger.Provides
@@ -17,24 +15,6 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 object AuthModule {
-
-    @Provides
-    @Singleton
-    fun provideSpotifyAuthInterceptor(
-        sharedPreferences: SharedPreferences,
-        authApi: AuthApi
-    ): SpotifyAuthInterceptor {
-        return SpotifyAuthInterceptor(sharedPreferences, authApi)
-    }
-
-    @Provides
-    fun provideAuthInstance() : AuthApi {
-        return Retrofit.Builder()
-            .baseUrl(SPOTIFY_AUTH_URL)
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
-            .create(AuthApi::class.java)
-    }
 
     @Provides
     @Singleton

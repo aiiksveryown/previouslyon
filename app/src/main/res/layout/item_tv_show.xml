@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/tvShowPosterImageView"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:src="@drawable/ic_launcher_background" />
+
+    <TextView
+        android:id="@+id/tvShowTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/tvShowPosterImageView"
+        android:layout_marginStart="8dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:text="TV Show Title" />
+
+    <TextView
+        android:id="@+id/tvShowRatingTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvShowTitleTextView"
+        android:layout_toEndOf="@id/tvShowPosterImageView"
+        android:layout_marginStart="8dp"
+        android:text="Rating: 0.0" />
+
+</RelativeLayout>

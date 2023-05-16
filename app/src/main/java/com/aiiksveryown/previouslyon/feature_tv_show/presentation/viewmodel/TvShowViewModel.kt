@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.aiiksveryown.previouslyon.feature_movie.data.response.MovieTvShowCreditsResponse
+import com.aiiksveryown.previouslyon.feature_tv_show.data.response.TvShowCreditsResponse
 import com.aiiksveryown.previouslyon.feature_tv_show.data.api.search.SearchTvShow
 import com.aiiksveryown.previouslyon.feature_tv_show.data.database.entity.TvShowEntity
 import com.aiiksveryown.previouslyon.feature_tv_show.data.repository.TvShowRepository
@@ -26,8 +26,8 @@ class TvShowViewModel @Inject constructor(
     private val _detailTvShow = MutableLiveData<Resource<TvShowDetailResponse>>()
     val detailTvShow : LiveData<Resource<TvShowDetailResponse>> get() = _detailTvShow
 
-    private val _tvShowCredits = MutableLiveData<Resource<MovieTvShowCreditsResponse>>()
-    val tvShowCredits : LiveData<Resource<MovieTvShowCreditsResponse>> get() = _tvShowCredits
+    private val _tvShowCredits = MutableLiveData<Resource<TvShowCreditsResponse>>()
+    val tvShowCredits : LiveData<Resource<TvShowCreditsResponse>> get() = _tvShowCredits
 
     private val _tvShowSeasons = MutableLiveData<Resource<TvShowSeasonResponse>>()
     val tvShowSeasons : LiveData<Resource<TvShowSeasonResponse>> get() = _tvShowSeasons

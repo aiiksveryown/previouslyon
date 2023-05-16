@@ -1,6 +1,6 @@
 package com.aiiksveryown.previouslyon.feature_tv_show.data.api
 
-import com.aiiksveryown.previouslyon.feature_movie.data.response.MovieTvShowCreditsResponse
+import com.aiiksveryown.previouslyon.feature_tv_show.data.response.TvShowCreditsResponse
 import com.aiiksveryown.previouslyon.feature_tv_show.data.response.TvShowDetailResponse
 import com.aiiksveryown.previouslyon.feature_tv_show.data.response.TvShowSearchResponse
 import com.aiiksveryown.previouslyon.feature_tv_show.data.response.TvShowSeasonResponse
@@ -27,7 +27,7 @@ interface TvShowApi {
     @GET("tv/{tv_id}/credits")
     suspend fun tvShowCredits(
         @Path("tv_id") id : Int
-    ) : Response<MovieTvShowCreditsResponse>
+    ) : Response<TvShowCreditsResponse>
 
     @GET("tv/{tv_id}/season/{season_number}")
     suspend fun tvShowSeasons(

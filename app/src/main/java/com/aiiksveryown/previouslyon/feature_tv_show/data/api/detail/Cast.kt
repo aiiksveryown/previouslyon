@@ -1,4 +1,4 @@
-package com.aiiksveryown.previouslyon.feature_movie.data.api.detail
+package com.aiiksveryown.previouslyon.feature_tv_show.data.api.detail
 
 data class Cast(
     val character: String,
@@ -6,4 +6,3 @@ data class Cast(
     val profile_path: String,
     val id : Int
 )
-

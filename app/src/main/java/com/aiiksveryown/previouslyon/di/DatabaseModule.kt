@@ -2,8 +2,6 @@ package com.aiiksveryown.previouslyon.di
 
 import android.app.Application
 import androidx.room.Room
-import com.aiiksveryown.previouslyon.feature_album.data.database.dao.AlbumDao
-import com.aiiksveryown.previouslyon.feature_movie.data.database.dao.MovieDao
 import com.aiiksveryown.previouslyon.feature_tv_show.data.database.dao.TvShowDao
 import com.aiiksveryown.previouslyon.util.Constants.DATABASE_NAME
 import com.aiiksveryown.previouslyon.util.database.AppDatabase
@@ -25,18 +23,6 @@ object DatabaseModule {
             AppDatabase::class.java,
             DATABASE_NAME
         ).fallbackToDestructiveMigration().build()
-    }
-
-    @Provides
-    @Singleton
-    fun provideAlbumDao(appDatabase: AppDatabase) : AlbumDao {
-        return appDatabase.albumDao()
-    }
-
-    @Provides
-    @Singleton
-    fun provideMovieDao(appDatabase: AppDatabase) : MovieDao {
-        return appDatabase.movieDao()
     }
 
     @Provides

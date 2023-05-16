@@ -1,4 +1,4 @@
-package com.aiiksveryown.previouslyon.feature_movie.data.api
+package com.aiiksveryown.previouslyon.feature_tv_show.data.api
 
 import com.aiiksveryown.previouslyon.BuildConfig.TMDB_API_KEY
 import okhttp3.Interceptor

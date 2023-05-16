@@ -17,8 +17,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import coil.load
 import com.aiiksveryown.previouslyon.R
 import com.aiiksveryown.previouslyon.databinding.FragmentTvShowDetailBinding
-import com.aiiksveryown.previouslyon.feature_movie.data.api.detail.Cast
-import com.aiiksveryown.previouslyon.feature_movie.presentation.adapter.CastAdapter
+import com.aiiksveryown.previouslyon.feature_tv_show.data.api.detail.Cast
+import com.aiiksveryown.previouslyon.feature_tv_show.presentation.adapter.CastAdapter
 import com.aiiksveryown.previouslyon.feature_tv_show.data.api.detail.Genre
 import com.aiiksveryown.previouslyon.feature_tv_show.data.api.detail.Season
 import com.aiiksveryown.previouslyon.feature_tv_show.data.api.detail.SpokenLanguage

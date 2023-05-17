@@ -1,7 +1,7 @@
 package com.aiiksveryown.previouslyon.di
 
-import com.aiiksveryown.previouslyon.feature_tv_show.data.api.TvShowApi
-import com.aiiksveryown.previouslyon.feature_tv_show.data.api.TMDBInterceptor
+import com.aiiksveryown.previouslyon.feature.tv_show.data.api.TvShowApi
+import com.aiiksveryown.previouslyon.feature.tv_show.data.api.TMDBInterceptor
 import com.aiiksveryown.previouslyon.util.Constants.TMDB_BASE_URL
 import com.google.gson.GsonBuilder
 import dagger.Module

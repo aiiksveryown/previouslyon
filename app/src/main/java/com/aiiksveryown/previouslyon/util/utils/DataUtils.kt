@@ -1,7 +1,7 @@
 package com.aiiksveryown.previouslyon.util.utils
 
-import com.aiiksveryown.previouslyon.feature_tv_show.data.api.search.SearchTvShow
-import com.aiiksveryown.previouslyon.feature_tv_show.data.database.entity.TvShowEntity
+import com.aiiksveryown.previouslyon.feature.tv_show.data.api.search.SearchTvShow
+import com.aiiksveryown.previouslyon.feature.tv_show.data.database.entity.TvShowEntity
 
 fun SearchTvShow.toTvShowEntity(): TvShowEntity {
     return TvShowEntity(

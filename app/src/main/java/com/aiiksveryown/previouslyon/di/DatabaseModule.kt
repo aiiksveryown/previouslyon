@@ -2,7 +2,7 @@ package com.aiiksveryown.previouslyon.di
 
 import android.app.Application
 import androidx.room.Room
-import com.aiiksveryown.previouslyon.feature_tv_show.data.database.dao.TvShowDao
+import com.aiiksveryown.previouslyon.feature.tv_show.data.database.dao.TvShowDao
 import com.aiiksveryown.previouslyon.util.Constants.DATABASE_NAME
 import com.aiiksveryown.previouslyon.util.database.AppDatabase
 import dagger.Module
@@ -30,5 +30,4 @@ object DatabaseModule {
     fun provideTvShowDao(appDatabase: AppDatabase) : TvShowDao {
         return appDatabase.tvShowDao()
     }
-
 }

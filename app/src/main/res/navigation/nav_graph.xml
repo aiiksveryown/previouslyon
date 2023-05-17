@@ -64,7 +64,7 @@
 <!--    </fragment>-->
     <fragment
         android:id="@+id/tvShowSearchFragment"
-        android:name="com.aiiksveryown.previouslyon.feature_tv_show.presentation.TvShowSearchFragment"
+        android:name="com.aiiksveryown.previouslyon.feature.tv_show.presentation.TvShowSearchFragment"
         android:label="fragment_tv_show_search"
         tools:layout="@layout/fragment_tv_show_search" >
         <action
@@ -85,7 +85,7 @@
 <!--    </fragment>-->
     <fragment
         android:id="@+id/tvShowFragment"
-        android:name="com.aiiksveryown.previouslyon.feature_tv_show.presentation.TvShowFragment"
+        android:name="com.aiiksveryown.previouslyon.feature.tv_show.presentation.TvShowFragment"
         android:label="fragment_tv_show"
         tools:layout="@layout/fragment_tv_show" >
         <action
@@ -97,22 +97,22 @@
     </fragment>
     <fragment
         android:id="@+id/tvShowDetailFragment"
-        android:name="com.aiiksveryown.previouslyon.feature_tv_show.presentation.TvShowDetailFragment"
+        android:name="com.aiiksveryown.previouslyon.feature.tv_show.presentation.TvShowDetailFragment"
         android:label="fragment_tv_show_detail"
         tools:layout="@layout/fragment_tv_show_detail" >
         <argument
             android:name="tvShow"
-            app:argType="com.aiiksveryown.previouslyon.feature_tv_show.data.api.search.SearchTvShow" />
+            app:argType="com.aiiksveryown.previouslyon.feature.tv_show.data.api.search.SearchTvShow" />
         <argument
             android:name="tvShowEntity"
-            app:argType="com.aiiksveryown.previouslyon.feature_tv_show.data.database.entity.TvShowEntity" />
+            app:argType="com.aiiksveryown.previouslyon.feature.tv_show.data.database.entity.TvShowEntity" />
         <action
             android:id="@+id/action_tvShowDetailFragment_to_tvShowEpisodeFragment"
             app:destination="@id/tvShowEpisodeFragment" />
     </fragment>
     <fragment
         android:id="@+id/tvShowEpisodeFragment"
-        android:name="com.aiiksveryown.previouslyon.feature_tv_show.presentation.TvShowEpisodeFragment"
+        android:name="com.aiiksveryown.previouslyon.feature.tv_show.presentation.TvShowEpisodeFragment"
         android:label="fragment_tv_show_episode"
         tools:layout="@layout/fragment_tv_show_episode" >
         <argument

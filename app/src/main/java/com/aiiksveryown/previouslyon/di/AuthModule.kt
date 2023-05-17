@@ -2,7 +2,6 @@ package com.aiiksveryown.previouslyon.di
 
 import android.content.Context
 import android.content.SharedPreferences
-import com.aiiksveryown.previouslyon.util.Constants.SPOTIFY_AUTH_URL
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

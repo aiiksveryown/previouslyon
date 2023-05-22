@@ -1,5 +1,6 @@
 package com.aiiksveryown.previouslyon.di
 
+import com.aiiksveryown.previouslyon.feature.tv_show.data.api.HomeApi
 import com.aiiksveryown.previouslyon.feature.tv_show.data.api.TvShowApi
 import com.aiiksveryown.previouslyon.feature.tv_show.data.api.TMDBInterceptor
 import com.aiiksveryown.previouslyon.util.Constants.TMDB_BASE_URL
@@ -56,6 +57,19 @@ object NetworkModule {
             .client(httpClient)
             .build()
             .create(TvShowApi::class.java)
+    }
+    @Provides
+    @Singleton
+    fun provideHomeInstance(
+        httpClient: OkHttpClient,
+        gsonConverterFactory: GsonConverterFactory
+    ) : HomeApi {
+        return Retrofit.Builder()
+            .baseUrl(TMDB_BASE_URL)
+            .addConverterFactory(gsonConverterFactory)
+            .client(httpClient)
+            .build()
+            .create(HomeApi::class.java)
     }
 
     @Provides

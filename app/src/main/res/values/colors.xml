@@ -13,4 +13,11 @@
     <color name="album_green">#32E875</color>
     <color name="movie_blue">#357DED</color>
     <color name="tv_show_red">#F44336</color>
+    <color name="background_color">#FFFFFF</color>
+    <color name="brand_color">#E82627</color>
+    <color name="white_primary">#FFFFFF</color>
+    <color name="card_background_color">#F3F5F6</color>
+    <color name="shade_ternary_color">#6103050A</color>
+    <color name="shade_primary_color">#DF03050A</color>
+    <color name="shade_quaternary_color">#2903050A</color>
 </resources>

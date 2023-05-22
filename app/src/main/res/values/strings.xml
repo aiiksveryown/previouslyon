@@ -17,4 +17,14 @@
     <string name="added_to_library">Added to library</string>
     <string name="removed_from_library">Removed from library</string>
     <string name="episodes">Episodes</string>
+    <string name="oops">Oops!</string>
+    <string name="description">There is no internet connection\nPlease check it out</string>
+    <string name="retry">Retry</string>
+    <string name="explore_label">Explore\n</string>
+    <string name="search_hint">Search for a movie, tv show, person…</string>
+    <string name="movies_label">Movies</string>
+    <string name="tv_shows_label">TV Shows</string>
+    <string name="actors_label">Actors</string>
+    <string name="trending_today_label">Trending Today</string>
+    <string name="internet_connection">There is no internet connection.</string>
 </resources>
